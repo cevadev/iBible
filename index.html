@@ -10,25 +10,49 @@
     <title>iBible - Software bíblico</title>
   </head>
   <body>
-    <header class="main-header">
-      <nav>
-        <form>
+    <header class="header">
+      <nav class="header__nav">
+        <div class="header__logo">
           <img
-            src="./assets/images/logo-opt-640x426-small.png"
+            class="header__iBible"
+            src="./assets/images/iBible-logo.png"
             alt="iBible logo"
           />
-          <input type="text" id="verse" placeholder="Ingrese versículo" />
-          <select name="bibles" id="bible-version">
-            <option value="rvr1909">Reina-Valera 1909 (RVR1909)</option>
-            <option value="rvr1960">Reina-Valera 1960 (RVR1960)</option>
-          </select>
-          <input type="submit" value="Buscar" />
+        </div>
+        <form class="header__form">
+          <input
+            class="header__input header__input-big"
+            type="text"
+            id="verse"
+            placeholder="Ingrese versículo"
+          />
+          <input
+            class="header__input header__input-big"
+            list="bibles"
+            placeholder="Seleccione la biblia"
+          />
+          <datalist id="bibles">
+            <option value="Reina-Valera 1909 (RVR1909)"></option>
+            <option value="Reina-Valera 1960 (RVR1960)"></option>
+          </datalist>
+          <input type="submit" class="header__search" value="" />
         </form>
+        <div class="header__links">
+          <a class="header__link" href="#">Tienda</a>
+        </div>
+        <div class="header__account">
+          <img
+            class="header__user"
+            src="./assets/images/account.png"
+            alt="iBible logo"
+          />
+          <span class="header__textlogin">Ingresar/Registrarse</span>
+        </div>
       </nav>
     </header>
-    <main>
-      <section></section>
+    <main class="main">
+      <section class="main__container"></section>
     </main>
-    <footer></footer>
+    <footer class="footer"></footer>
   </body>
 </html>
