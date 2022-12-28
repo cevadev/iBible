@@ -150,23 +150,51 @@ body {
     color: #8F97A2;
 }
 
-.header__nav {
-    background-color: #233946;
-    display: flex;
-    align-items: center;
+.header{
+    display: grid;
+    box-shadow: 0 2px 4px 0 rgb(0 0 0 / 25%);
+    color: rgb(255 255 255);
+    font-size: 13px;
+    height: 52px;
+    position: relative;
+    right: 0;
+    top: 0;
+    width: 100%;
 }
 
+.header__nav {
+    background-color: #233946;
+    display: grid;
+    grid-template-areas: "logo verse bible search link logo actions menu";
+    grid-template-columns: auto auto auto auto auto auto auto auto;
+    align-items: center;
+    padding-right: 12px;
+}
+
+.header__wrapper{
+    display: grid;
+    padding-left: 12px;
+}
+
+.header__logo{
+    align-items: center;
+    display: flex;
+    grid-area: logo;
+    padding-left: 12px;
+}
 
 .header__iBibleLogo{
-    margin: 5px 5px 0 5px;
     width: 30px;
-    height: 20px;
+    height: 25px;
 }
 
 .header__iBibleText{
-    margin: 5px 15px 0px 0px;
-    width: 80px;
+    padding-left: 12px;
+    width: 120px;
+    height: 25px;
 }
+
+
 
 .header__search {
     background: url('../assets/images/search-button.png');
@@ -183,6 +211,12 @@ body {
     margin: 0px 15px 0px 15px;
 }
 
+.header__account{
+    display: grid;
+    justify-content: flex-end;
+}
+
 .header__textlogin{
     color: #FFFFFF;
+    
 }

@@ -10,19 +10,19 @@
     <title>iBible - Software bíblico</title>
   </head>
   <body>
-    <header class="header">
+    <header id="header" class="header">
       <nav class="header__nav">
-        <div class="header__logo">
-          <img
-            class="header__iBibleLogo"
-            src="./assets/images/iBible-logo.png"
-            alt="iBible logo"
-          />
-          <img
-            class="header__iBibleText"
-            src="./assets/images/iBible.png"
-            alt="iBible Text"
-          />
+        <div class="header__wrapper">
+          <a href="/home" class="header__home">
+            <div class="header__logo">
+              <figure class="header__iBibleLogo">
+                <img src="./assets/images/iBible-logo.png" alt="iBible logo" />
+              </figure>
+              <figure class="header__iBibleText">
+                <img src="./assets/images/iBible.png" alt="iBible Text" />
+              </figure>
+            </div>
+          </a>
         </div>
         <form class="header__form">
           <input
@@ -42,7 +42,7 @@
           </datalist>
           <input type="submit" class="header__search" value="" />
         </form>
-        <div class="header__links">
+        <div class="header__item">
           <a class="header__link" href="#">Tienda</a>
         </div>
         <div class="header__account">
