@@ -165,36 +165,38 @@ body {
 .header__nav {
     background-color: #233946;
     display: grid;
-    grid-template-areas: "logo verse bible search link logo actions menu";
+    grid-template-areas: "logo verse bible search link login actions menu";
     grid-template-columns: auto auto auto auto auto auto auto auto;
     align-items: center;
     padding-right: 12px;
+    position: relative;
+    
 }
 
-.header__wrapper{
+.logo{
     display: grid;
-    padding-left: 12px;
 }
 
 .header__logo{
-    align-items: center;
-    display: flex;
     grid-area: logo;
-    padding-left: 12px;
+    align-items: center;
+    position: relative;
+    padding: 0px;
+    
+}
+
+.header__logo-container{
+    display: flex;
 }
 
 .header__iBibleLogo{
-    width: 30px;
-    height: 25px;
+    margin-top: 8px;
 }
 
 .header__iBibleText{
-    padding-left: 12px;
-    width: 120px;
-    height: 25px;
+    margin-top: 8px;
+    margin-left: 4px;
 }
-
-
 
 .header__search {
     background: url('../assets/images/search-button.png');
