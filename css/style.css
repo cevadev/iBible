@@ -173,52 +173,104 @@ body {
     
 }
 
-.logo{
-    display: grid;
-}
-
 .header__logo{
+    display: grid;
     grid-area: logo;
     align-items: center;
     position: relative;
-    padding: 0px;
+    padding-left: 12px;
+    width: 80px;
     
 }
 
-.header__logo-container{
+.header__home{
+    width: 78px;
+}
+
+.logo__container{
+    display: flex;
+    width: 78px;
+}
+
+.header__iBibleLogo img{
+    margin-top: 8px;
+    width: 22px;
+    height: 25px;
+}
+
+.header__iBibleText img{
+    margin-top: 8px;
+    margin-left: 8px;
+    width: 51px;
+    height: 25px;
+}
+
+.search-form{
     display: flex;
 }
 
-.header__iBibleLogo{
-    margin-top: 8px;
+.search-bible{
+    display: flex;
 }
 
-.header__iBibleText{
-    margin-top: 8px;
-    margin-left: 4px;
+.search-bible input{
+    font-size: 1.3rem;
+    width: 100%;
+    height: 20px;
+    border-radius: 3%;
+    padding: 6px 8px;
 }
 
-.header__search {
-    background: url('../assets/images/search-button.png');
+.search-bible span{
+    padding: 6px 8px;
+}
+
+.search-bible .search-version{
+    cursor: pointer;
+}
+
+.search-submit{
+    margin-left: 8px;
+    background-color: #abe542;
     border: 0;
-    margin: 5px 0px 0px 0px ;
-    width: 62px;
-    height: 35px;
-
+    border-radius: 5px;
+    display: block;
+    width: 45px;
+    height: 33px;
+    cursor: pointer;
 }
 
-.header__link{
+.header-list{
+    display: flex;
+}
+
+.menu li{
+    display: flex;
+}
+
+.menu li a {
+    display: flex;
+    color: rgb(190 205 227);
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 1.5rem;
     text-decoration: none;
-    color: #FFFFFF;
-    margin: 0px 15px 0px 15px;
+    padding: 6px 8px;
+    justify-content: center;
+    align-items: center;
 }
 
-.header__account{
-    display: grid;
-    justify-content: flex-end;
-}
-
-.header__textlogin{
-    color: #FFFFFF;
+.menu li img{
     
+    padding: 6px 3px 6px 8px;
+}
+
+.menu span{
+    width: 18px;
+}
+
+.menu .header-login{
+    display: flex;
+    padding: 6px 8px;
 }

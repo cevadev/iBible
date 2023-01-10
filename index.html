@@ -12,51 +12,63 @@
   <body>
     <header id="header" class="header">
       <nav class="header__nav">
-        <div class="logo">
-          <div class="header__logo">
-            <a href="/home" class="header__home">
-              <div class="header__logo-container">
-                <figure class="header__iBibleLogo">
-                  <img
-                    src="./assets/images/iBible-logo.png"
-                    alt="iBible logo"
-                  />
-                </figure>
-                <figure class="header__iBibleText">
-                  <img src="./assets/images/iBible.png" alt="iBible Text" />
-                </figure>
-              </div>
-            </a>
+        <div class="header__logo">
+          <a href="/home" class="header__home">
+            <div class="logo__container">
+              <figure class="header__iBibleLogo">
+                <img src="./assets/images/iBible-logo.png" alt="iBible logo" />
+              </figure>
+              <figure class="header__iBibleText">
+                <img src="./assets/images/iBible.png" alt="iBible Text" />
+              </figure>
+            </div>
+          </a>
+        </div>
+
+        <form class="search-form">
+          <div class="search-bible">
+            <input
+              class="search-verse"
+              type="text"
+              id="verse"
+              placeholder="Ingrese versículo"
+            />
+            <span></span>
+            <input class="search-version" list="bibles" placeholder="Biblias" />
+            <datalist id="bibles">
+              <option value="Reina-Valera 1909 (RVR1909)"></option>
+              <option value="Reina-Valera 1960 (RVR1960)"></option>
+            </datalist>
           </div>
-        </div>
-        <form class="header__form">
-          <input
-            class="header__input header__input-big"
-            type="text"
-            id="verse"
-            placeholder="Ingrese versículo"
-          />
-          <input
-            class="header__input header__input-big"
-            list="bibles"
-            placeholder="Seleccione la biblia"
-          />
-          <datalist id="bibles">
-            <option value="Reina-Valera 1909 (RVR1909)"></option>
-            <option value="Reina-Valera 1960 (RVR1960)"></option>
-          </datalist>
-          <input type="submit" class="header__search" value="" />
+          <div class="search-submit-container">
+            <button type="submit" class="search-submit" value="Search">
+              <svg width="32" height="32" viewBox="0 0 24 24">
+                <path
+                  fill="#233946"
+                  d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0 0 16 9.5A6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5S14 7.01 14 9.5S11.99 14 9.5 14z"
+                />
+              </svg>
+            </button>
+          </div>
         </form>
-        <div class="header__item">
-          <a class="header__link" href="#">Tienda</a>
-        </div>
-        <div class="header__account">
-          <img
-            class="header__user"
-            src="./assets/images/account.png"
-            alt="iBible logo"
-          />
-          <span class="header__textlogin">Ingresar/Registrarse</span>
+        <div class="menu">
+          <div class="header-menu">
+            <ul class="header-list">
+              <li>
+                <a href="#">Tienda</a>
+              </li>
+              <span></span>
+              <li>
+                <a href="#" class="header-login">
+                  <img
+                    class="header-user"
+                    src="./assets/images/account.png"
+                    alt="iBible logo"
+                  />Ingresar / Registrarse
+                </a>
+              </li>
+            </ul>
+          </div>
         </div>
       </nav>
     </header>
