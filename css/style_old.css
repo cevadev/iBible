@@ -1,0 +1,280 @@
+/** Reset **/
+@charset "UTF-8";
+/* Aquí definimos las Custom properties */:root {
+    --negro: #393939;
+    /* Tipografía */
+    --tipo-principal: Helvetica, Arial, sans-serif;
+    --tipo-secundaria: Verdana;
+}
+
+/* Las adaptamos al modo oscuro */
+@media (prefers-color-scheme: dark) {
+    :root {
+        --negro: #ececec;
+    }
+}
+
+/* Opcional */
+/* Configuramos si un usuario ha activado el modo alto contraste. (WD) */
+/* Opcional */
+/* Desactivamos los animations en el caso de que el usuario haya configurado el modo sin animation */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        -webkit-animation: none !important;
+        animation: none !important;
+        -webkit-transition: none !important;
+        transition: none !important;
+    }
+}
+
+/* Reseteamos los margin y paddings de todas las etiquetas */
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    vertical-align: baseline;
+}
+
+/* Reseteamos los enlaces para funcionar como cajas... */
+a {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+    font-size: inherit;
+}
+
+/* ... excepto los que se encuentran en párrafos */
+p a {
+    display: inline;
+}
+
+/* Quitamos los puntos de los <li> */
+li {
+    list-style-type: none;
+}
+
+/* Configuramos anclas suaves */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Desactivamos estilos por defecto de las principales etiquetas de texto */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+span,
+a,
+strong,
+blockquote,
+i,
+b,
+u,
+em {
+    font-size: 1em;
+    font-weight: inherit;
+    font-style: inherit;
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Evitamos problemas con los pseudoelementos de quotes */
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: "";
+    content: none;
+}
+
+/* Configuramos el texto que seleccionamos */
+::-moz-selection {
+    background-color: var(--negro);
+    color: var(--blanco);
+}
+
+::selection {
+    background-color: var(--negro);
+    color: var(--blanco);
+}
+
+/* Reseteamos las tablas */
+table,
+tr,
+td {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+/* Evitamos problemas con los SVG */
+svg {
+    width: 100%;
+    display: block;
+    fill: currentColor;
+}
+
+/* Configuramos la tipografía para toda la web */
+body {
+    min-height: 100vh;
+    font-size: 100%;
+    font-family: var(--tipo-principal);
+    color: var(--negro);
+    /* opcional */
+    line-height: 1.4em;
+    /* opcional */
+    -webkit-hyphens: auto;
+    -ms-hyphens: auto;
+    hyphens: auto;
+    /* opcional */
+    font-smooth: always;
+    /* opcional */
+    -webkit-font-smoothing: antialiased;
+    /* opcional */
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/** fin reset **/
+
+*,
+*:after,
+*::before {
+    box-sizing: inherit;
+}
+
+::placeholder {
+    color: #8F97A2;
+}
+
+.header{
+    display: grid;
+    box-shadow: 0 2px 4px 0 rgb(0 0 0 / 25%);
+    color: rgb(255 255 255);
+    font-size: 13px;
+    height: 52px;
+    position: relative;
+    right: 0;
+    top: 0;
+    width: 100%;
+}
+
+.header__nav {
+    background-color: #233946;
+    display: grid;
+    grid-template-areas: "logo verse bible search link login actions menu";
+    grid-template-columns: auto auto auto auto auto auto auto auto;
+    align-items: center;
+    padding-right: 12px;
+    position: relative;
+    
+}
+
+.header__logo{
+    display: grid;
+    grid-area: logo;
+    align-items: center;
+    position: relative;
+    padding-left: 12px;
+    width: 80px;
+    
+}
+
+.header__home{
+    width: 78px;
+}
+
+.logo__container{
+    display: flex;
+    width: 78px;
+}
+
+.header__iBibleLogo img{
+    margin-top: 8px;
+    width: 22px;
+    height: 25px;
+}
+
+.header__iBibleText img{
+    margin-top: 8px;
+    margin-left: 8px;
+    width: 51px;
+    height: 25px;
+}
+
+.search-form{
+    display: flex;
+}
+
+.search-bible{
+    display: flex;
+}
+
+.search-bible input{
+    font-size: 1.3rem;
+    width: 100%;
+    height: 20px;
+    border-radius: 3%;
+    padding: 6px 8px;
+}
+
+.search-bible span{
+    padding: 6px 8px;
+}
+
+.search-bible .search-version{
+    cursor: pointer;
+}
+
+.search-submit{
+    margin-left: 8px;
+    background-color: #abe542;
+    border: 0;
+    border-radius: 5px;
+    display: block;
+    width: 45px;
+    height: 33px;
+    cursor: pointer;
+}
+
+.header-list{
+    display: flex;
+}
+
+.menu li{
+    display: flex;
+}
+
+.menu li a {
+    display: flex;
+    color: rgb(190 205 227);
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 1.5rem;
+    text-decoration: none;
+    padding: 6px 8px;
+    justify-content: center;
+    align-items: center;
+}
+
+.menu{
+    display: flex;
+}
+
+.menu li img{
+    
+    padding: 6px 3px 6px 8px;
+}
+
+.menu span{
+    width: 18px;
+}
+
+.menu .header-login{
+    display: flex;
+    padding: 6px 8px;
+}
